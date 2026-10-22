@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titel }}</title>
+</head>
+<body>
+    <p>Hostname des Servers: {{ hostname }}</p>
+    <p>IP-Adresse des Servers: {{ ip }}</p>
+    <p>Angemeldeter Benutzer: {{ username }}</p>
+    <p>Ihre IP-Adresse {{ visitor_ip }}</p>
+
+    <ul>
+        {% for device in devices %}
+            <li>{{ device.name }} - IP: {{ device.ip_address }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
